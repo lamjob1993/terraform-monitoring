@@ -4,10 +4,10 @@
 
 **Как установить и запустить Terraform на Debian?**
 
-1. Качаем бинарь Terraform с [официального сайта](https://developer.hashicorp.com/terraform/install#linux) 
-    - `curl -O https://releases.hashicorp.com/terraform/1.11.4/terraform_1.11.4_linux_amd64.zip`
+1. Качаем бинарь Terraform
+    - `curl -O https://releases.hashicorp.com/terraform/1.5.7/terraform_1.5.7_linux_amd64.zip`
 2. Ставим архиватор unzip - `sudo apt install unzip`
-    - `unzip terraform_1.11.4_linux_amd64.zip`
+    - `unzip terraform_1.5.7_linux_amd64.zip`
 2. Кладем в `/usr/local/bin` и назначаем права `+x`, если не назначены
     - `sudo cp terraform /usr/local/bin/`
 3. Проверяем в консоли (terraform автоматом будет доступен в системе)
