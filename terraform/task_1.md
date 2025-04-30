@@ -1,7 +1,5 @@
 # Terraform
 
-## Установка
-
 ### Task 1
 
 **Как установить и запустить Terraform на Debian?**
