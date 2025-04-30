@@ -4,17 +4,20 @@
 
 **Как установить и запустить Terraform на Debian?**
 
-1. Качаем бинарь Terraform с [официального репозитория](https://releases.hashicorp.com/terraform)
+1. Качаем бинарь Terraform из [официального репозитория](https://releases.hashicorp.com/terraform)
     - `curl -O https://releases.hashicorp.com/terraform/1.11.4/terraform_1.11.4_linux_amd64.zip`
+    - Если сайт не открывается, то используем VPN
+    - Почему-то с разной периодичностью архивы скачиваются битыми или не скачиваются вообще
+    - Поэтому качаем архив напрямую в Windows и кладем через проводник MobaXterm в нужную директорию в Linux
 2. Ставим архиватор unzip - `sudo apt install unzip`
     - `unzip terraform_1.11.4_linux_amd64.zip`
-2. Кладем в `/usr/local/bin` и назначаем права `+x`, если не назначены
+2. Кладем бинарь в `/usr/local/bin` и назначаем права `+x`, если не назначены
     - `sudo cp terraform /usr/local/bin/`
 3. Проверяем в консоли (terraform автоматом будет доступен в системе)
     - `terraform version`
-4. Если не качает, если не можете разархивировать, то скачайте Linux AMD64 сначала на Windows, а потом перетащите в свою файловую систему Debian файл `terraform` с помощью MobaXterm и проделайте процедуры указанные с пункта №2
+    - И выведет версию (качаем последнюю, не RC, не Alpha, не Beta)
 
-Теперь Terraform установлен и готов к работе!
+**Теперь Terraform установлен и готов к работе!**
 
 **Первые шаги:**
 
@@ -29,7 +32,7 @@ terraform {
   required_providers {
     local = {
       source = "hashicorp/local"
-      version = "2.1.0" # Укажите актуальную версию, если нужно
+      version = "2.5.2" # Укажите актуальную версию, если нужно
     }
   }
 }
@@ -52,6 +55,8 @@ output "file_path" {
 
 1.  Перейди в папку `terraform-hello` в терминале.
 2.  Выполни `terraform init`. Terraform скачает провайдер `local`.
+    - Если Terraform не скачивает провайдер и выдает ошибку, то [кладем локальный провайдер вручную в](https://hc-releases.website.cloud.croc.ru/terraform-provider-local/) по адресу: `~/.terraform.d/plugins/registry.terraform.io/hashicorp/local/2.5.2/linux_amd64/`
+    - А также вы можете столкнуться с проблемой с VPN и снова с проблемой битых архивов, значит нужно проделать путь, как в п.1
 3.  Выполни `terraform plan`. Ты увидишь, что Terraform планирует создать один ресурс (`local_file.hello`).
 4.  Выполни `terraform apply`. Подтверди действие, введя `yes`. Terraform создаст файл `hello.txt` в текущей папке (filename = "${path.module}/hello.txt") с указанным содержимым. Ты также увидишь вывод `file_path`.
 5.  Чтобы удалить созданный файл, выполни `terraform destroy`. Подтверди действие.
