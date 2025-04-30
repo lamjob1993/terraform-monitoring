@@ -32,7 +32,7 @@ terraform {
   required_providers {
     local = {
       source = "hashicorp/local"
-      version = "2.5.2" # Укажите актуальную версию, если нужно
+      version = "2.5.2" # Укажите актуальную версию провайдера, если нужно
     }
   }
 }
