@@ -6,7 +6,7 @@
   - Terraform:
     - [Официальный сайт Terraform Download](https://developer.hashicorp.com/terraform/install#linux)
       - [Официальный сайт для автоматической загрузки провайдеров самим Терраформом](https://registry.terraform.io/browse/providers)
-      - [Официальный FTP для ручной загрузки провайдеров Terraform под VPN](https://releases.hashicorp.com/)
+      - [Официальный FTP для ручной загрузки провайдеров Terraform из-под VPN](https://releases.hashicorp.com/)
       - [Официальный сайт GitHub с основными провайдерами OpenTofu (Terraform)](https://github.com/orgs/opentofu/repositories?type=all)
       - [Неофициальное зеркало репозитория для провайдеров Terraform](https://terraform-registry-mirror.ru/)
   - Образы и ПО:
