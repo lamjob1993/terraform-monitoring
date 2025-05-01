@@ -1,6 +1,7 @@
 # Содержание
 
 - [Введение](https://github.com/lamjob1993/terraform-monitoring/tree/main/terraform/beggining)
+  - Cделать интеграцию с LVM или с Docker? 
 - [Практика](https://github.com/lamjob1993/terraform-monitoring/tree/main/terraform)
 - Дополнительные ссылки для изучения:
   - Terraform:
