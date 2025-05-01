@@ -5,7 +5,7 @@
 **Как установить и запустить Terraform на Debian?**
 
 1. Качаем бинарь Terraform из [официального репозитория](https://releases.hashicorp.com/terraform)
-    - Или качаем [OpenTofu отсюда](https://github.com/opentofu/opentofu/releases) для linux_amd64
+    - Или качаем [OpenTofu отсюда](https://github.com/opentofu/opentofu/releases) в виде пакета [tofu_1.9.1_amd64.deb](https://github.com/opentofu/opentofu/releases/download/v1.9.1/tofu_1.9.1_amd64.deb)
     - `curl -O https://releases.hashicorp.com/terraform/1.11.4/terraform_1.11.4_linux_amd64.zip`
     - Если сайт не открывается, то используем VPN
     - Почему-то с разной периодичностью архивы скачиваются битыми или не скачиваются вообще
