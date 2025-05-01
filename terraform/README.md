@@ -1,7 +1,7 @@
 # Содержание
 
 - [Введение](https://github.com/lamjob1993/terraform-monitoring/tree/main/terraform/beggining)
-- Практика
+- [Практика](https://github.com/lamjob1993/terraform-monitoring/tree/main/terraform)
 - Дополнительные ссылки для изучения:
   - Terraform:
     - [Официальный сайт Terraform Download](https://developer.hashicorp.com/terraform/install#linux)
