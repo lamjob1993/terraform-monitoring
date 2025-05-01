@@ -45,13 +45,16 @@ provider_installation {
 }
 ```
 
-#### 6. Способ с альтернативными зеркалами. В файл `.terraformrc` вписываем следующий конфиг (для загрузки провайдеров с вашего зеркала - способ плохо работает на территории РФ):
+#### 6. Способ с альтернативными зеркалами. В файл `.terraformrc` вписываем следующий конфиг (для загрузки провайдеров [с вашего зеркала](https://terraform-registry-mirror.ru/) - способ плохо работает на территории РФ):
 
 ```hcl
 provider_installation {
-    network_mirror {
-        url = "https://terraform-registry-mirror.ru/"
-    }
+  network_mirror {
+    url = "https://terraform-registry-mirror.ru/"
+  }
+  direct {
+    exclude = ["registry.terraform.io/*/*", "releases.hashicorp.com/*/*"]
+  }
 }
 ```
 
