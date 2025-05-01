@@ -7,11 +7,11 @@ _От меня сразу рекомендация использовать то
 ### **Как установить и запустить Terraform на Debian?**
 
 #### 1. Качаем бинарь Terraform из [официального репозитория](https://releases.hashicorp.com/terraform)
-    - Или качаем [OpenTofu отсюда](https://github.com/opentofu/opentofu/releases) в виде пакета [tofu_1.9.1_amd64.deb](https://github.com/opentofu/opentofu/releases/download/v1.9.1/tofu_1.9.1_amd64.deb)
-        - `wget https://github.com/opentofu/opentofu/releases/download/v1.9.1/tofu_1.9.1_amd64.deb`
-    - Если сайт не открывается, то используем VPN
-    - Почему-то с разной периодичностью архивы скачиваются битыми или не скачиваются вообще (официальный сайт Terraform)
-    - Поэтому качаем архив напрямую в Windows и кладем через проводник MobaXterm в нужную директорию в Linux (либо качаем сразу рабочий `.deb` пакет OpenTofu сразу в Debian)
+        - Или качаем [OpenTofu отсюда](https://github.com/opentofu/opentofu/releases) в виде пакета [tofu_1.9.1_amd64.deb](https://github.com/opentofu/opentofu/releases/download/v1.9.1/tofu_1.9.1_amd64.deb)
+            - `wget https://github.com/opentofu/opentofu/releases/download/v1.9.1/tofu_1.9.1_amd64.deb`
+        - Если сайт не открывается, то используем VPN
+        - Почему-то с разной периодичностью архивы скачиваются битыми или не скачиваются вообще (официальный сайт Terraform)
+        - Поэтому качаем архив напрямую в Windows и кладем через проводник MobaXterm в нужную директорию в Linux (либо качаем сразу рабочий `.deb` пакет OpenTofu сразу в Debian)
     - Установка `sudo dpkg -i tofu_1.9.1_amd64.deb`
 #### 2. Ставим архиватор unzip - `sudo apt install unzip`
     - `unzip terraform_x.x.x_linux_amd64.zip`
