@@ -5,7 +5,7 @@
 - Дополнительные ссылки для изучения:
   - [Официальный сайт Terraform Download](https://developer.hashicorp.com/terraform/install#linux)
     - [Официальный сайт для загрузки провайдеров Terraform](https://registry.terraform.io/browse/providers)
-    - [Зеркало репозитория Terraform](https://terraform-registry-mirror.ru/)
+    - [Неофициальное зеркало репозитория Terraform](https://terraform-registry-mirror.ru/)
   - [Зеркало Yandex.Cloud с софтом для инфры (инфраструктуры)](https://mirror.yandex.ru/)
     - [Руководство Yandex.Cloud по инфре](https://yandex.cloud/ru/docs/tutorials/)
   - [Terraform в Yandex.Cloud](https://yandex.cloud/ru/blog/posts/2019/03/terraform)
