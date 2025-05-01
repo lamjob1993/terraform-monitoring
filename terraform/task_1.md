@@ -4,7 +4,7 @@
 
 _От меня сразу рекомендация использовать только OpenTofu - это официальный форк от Terraform и синтаксис у них одинаковый. Причем оба ПО заблокированы на территории РФ, но с OpenTofu всё гораздо проще._
 
-**Как установить и запустить Terraform на Debian?**
+### **Как установить и запустить Terraform на Debian?**
 
 1. Качаем бинарь Terraform из [официального репозитория](https://releases.hashicorp.com/terraform)
     - Или качаем [OpenTofu отсюда](https://github.com/opentofu/opentofu/releases) в виде пакета [tofu_1.9.1_amd64.deb](https://github.com/opentofu/opentofu/releases/download/v1.9.1/tofu_1.9.1_amd64.deb)
@@ -49,7 +49,7 @@ _От меня сразу рекомендация использовать то
     }
     ```
 
-**Теперь Terraform установлен и готов к работе!**
+### **Теперь Terraform установлен и готов к работе!**
 
 **Первые шаги:**
 
