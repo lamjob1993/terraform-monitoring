@@ -1,6 +1,6 @@
 # Содержание
 ...
-- Введение
+- [Введение](https://github.com/lamjob1993/terraform-monitoring/tree/main/terraform/beggining)
 - Практика
 - Дополнительные ссылки для изучения:
   - https://mirror.yandex.ru/
