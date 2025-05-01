@@ -58,7 +58,7 @@ output "file_path" {
 
 1.  Перейди в папку `terraform-hello` в терминале.
 2.  Выполни `terraform init`. Terraform скачает провайдер `local`.
-    - Если Terraform не скачивает провайдер и выдает ошибку, то [кладем локальный провайдер вручную в](https://hc-releases.website.cloud.croc.ru/terraform-provider-local/) по адресу: `~/.terraform.d/plugins/registry.terraform.io/hashicorp/local/2.5.2/linux_amd64/`
+    - Если Terraform не скачивает провайдер и выдает ошибку, то [кладем локальный провайдер вручную](https://hc-releases.website.cloud.croc.ru/terraform-provider-local/) по адресу: `~/.terraform.d/plugins/registry.terraform.io/hashicorp/local/2.5.2/linux_amd64/`
     - А также вы можете столкнуться с проблемой с VPN и снова с проблемой битых архивов, значит нужно проделать путь, как в п.1
     - Или же можете воспользоваться зеркалами репозиториев [из раздела](https://github.com/lamjob1993/terraform-monitoring/blob/main/terraform/README.md)
 3.  Выполните `terraform plan`. Вы увидите, что Terraform планирует создать один ресурс (`local_file.hello`).
