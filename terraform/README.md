@@ -5,8 +5,9 @@
 - Дополнительные ссылки для изучения:
   - Terraform:
     - [Официальный сайт Terraform Download](https://developer.hashicorp.com/terraform/install#linux)
-      - [Официальный сайт для автоматической загрузки провайдеров Terraform](https://registry.terraform.io/browse/providers)
-      - [Официальный FTP для ручной загрузки провайдеров Terraform](https://releases.hashicorp.com/)
+      - [Официальный сайт для автоматической загрузки провайдеров самим Терраформом](https://registry.terraform.io/browse/providers)
+      - [Официальный FTP для ручной загрузки провайдеров Terraform под VPN](https://releases.hashicorp.com/)
+      - [Официальный сайт GitHub с основными провайдерами OpenTofu (Terraform)](https://github.com/orgs/opentofu/repositories?type=all)
       - [Неофициальное зеркало репозитория для провайдеров Terraform](https://terraform-registry-mirror.ru/)
   - Образы и ПО:
     - [Зеркало Yandex.Cloud с софтом для инфры (инфраструктуры)](https://mirror.yandex.ru/):
