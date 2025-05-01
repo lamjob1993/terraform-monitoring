@@ -34,7 +34,14 @@ _От меня сразу рекомендация использовать то
         wget https://releases.hashicorp.com/terraform-provider-local/2.5.2/terraform-provider-local_2.5.2_linux_amd64.zip
         unzip terraform-provider-local_2.5.2_linux_amd64.zip -d ~/.terraform.d/plugins/registry.opentofu.org/hashicorp/local/2.5.2/linux_amd64
         ```
-
+7. Настройте .terraformrc:
+        ```hcl
+        provider_installation {
+          filesystem_mirror {
+            path = "~/.terraform.d/plugins"
+          }
+        }
+```
 
 **Теперь Terraform установлен и готов к работе!**
 
