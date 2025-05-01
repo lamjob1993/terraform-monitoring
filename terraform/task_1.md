@@ -38,9 +38,9 @@ unzip terraform-provider-local_2.5.2_linux_amd64.zip -d ~/.terraform.d/plugins/r
 
 ```hcl
 provider_installation {
-    filesystem_mirror {
-        path = "~/.terraform.d/plugins"
-    }
+  filesystem_mirror {
+    path = "~/.terraform.d/plugins"
+  }
 }
 ```
 
