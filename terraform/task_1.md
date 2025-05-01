@@ -6,59 +6,59 @@ _От меня сразу рекомендация использовать то
 
 ### **Как установить и запустить Terraform на Debian?**
 
-#### 1. Качаем бинарь Terraform из [официального репозитория](https://releases.hashicorp.com/terraform)
-        - Или качаем [OpenTofu отсюда](https://github.com/opentofu/opentofu/releases) в виде пакета [tofu_1.9.1_amd64.deb](https://github.com/opentofu/opentofu/releases/download/v1.9.1/tofu_1.9.1_amd64.deb)
-            - `wget https://github.com/opentofu/opentofu/releases/download/v1.9.1/tofu_1.9.1_amd64.deb`
-        - Если сайт не открывается, то используем VPN
-        - Почему-то с разной периодичностью архивы скачиваются битыми или не скачиваются вообще (официальный сайт Terraform)
-        - Поэтому качаем архив напрямую в Windows и кладем через проводник MobaXterm в нужную директорию в Linux (либо качаем сразу рабочий `.deb` пакет OpenTofu сразу в Debian)
-    - Установка `sudo dpkg -i tofu_1.9.1_amd64.deb`
+#### 1. Качаем [OpenTofu отсюда](https://github.com/opentofu/opentofu/releases) в виде пакета [tofu_1.9.1_amd64.deb](https://github.com/opentofu/opentofu/releases/download/v1.9.1/tofu_1.9.1_amd64.deb)
+- `wget https://github.com/opentofu/opentofu/releases/download/v1.9.1/tofu_1.9.1_amd64.deb`
+- Если сайт не открывается, то используем VPN
+- Почему-то с разной периодичностью архивы скачиваются битыми или не скачиваются вообще (официальный сайт Terraform)
+- Поэтому в случае сбоев качаем напрямую в Windows и кладем `.deb` через проводник MobaXterm в нужную директорию в Linux
+- Установка `sudo dpkg -i tofu_1.9.1_amd64.deb`
+
 #### 2. Ставим архиватор unzip - `sudo apt install unzip`
-    - `unzip terraform_x.x.x_linux_amd64.zip`
-    - Для пакета `.deb` этот раздел пропускаем
+- `unzip terraform_x.x.x_linux_amd64.zip`
+- Для пакета `.deb` этот раздел пропускаем
 #### 3. Кладем бинарь в `/usr/local/bin` и назначаем права `+x`, если не назначены
-    - `sudo cp terraform /usr/local/bin/`
-    - Для пакета `.deb` этот раздел пропускаем
+- `sudo cp terraform /usr/local/bin/`
+- Для пакета `.deb` этот раздел пропускаем
 #### 4. Проверяем в консоли (terraform автоматом будет доступен в системе)
-    - `terraform version`
-    - `tofu version`
-    - И выведет версию (качаем последнюю, не RC, не Alpha, не Beta)
+- `terraform version`
+- `tofu version`
+- И выведет версию (качаем последнюю, не RC, не Alpha, не Beta)
 #### 5. Включаем обязательно автодополнение в консоли `tofu -install-autocomplete`
-    - Применяем изменения `source ~/.bashrc`
-    - Готово, пробуем `tofu ver...` + `tab`
+- Применяем изменения `source ~/.bashrc`
+- Готово, пробуем `tofu ver...` + `tab`
 #### 6. Ручная загрузка провайдеров (так как скорее всего зеркала будут недоступны)
-    - Найдите нужный провайдер (например, hashicorp/local) на [GitHub Releases](https://github.com/opentofu/terraform-provider-local/releases) или через VPN.
-    - Скачайте и распакуйте в папку плагинов:
-    
-    ```bash
-    mkdir -p ~/.terraform.d/plugins/registry.opentofu.org/hashicorp/local/2.5.2/linux_amd64
-    wget https://releases.hashicorp.com/terraform-provider-local/2.5.2/terraform-provider-local_2.5.2_linux_amd64.zip
-    unzip terraform-provider-local_2.5.2_linux_amd64.zip -d ~/.terraform.d/plugins/registry.opentofu.org/hashicorp/local/2.5.2/linux_amd64
-    ```
-    
-    - Предварительно должна быть создана директория в домашнем каталоге `~/.terraform.d/plugins`
-    - Предварительно должен быть создан одноименный файл в домашнем каталоге `touch ~/.terraformrc`
+- Найдите нужный провайдер (например, hashicorp/local) на [GitHub Releases](https://github.com/opentofu/terraform-provider-local/releases) или через VPN.
+- Скачайте и распакуйте в папку плагинов:
+
+```bash
+mkdir -p ~/.terraform.d/plugins/registry.opentofu.org/hashicorp/local/2.5.2/linux_amd64
+wget https://releases.hashicorp.com/terraform-provider-local/2.5.2/terraform-provider-local_2.5.2_linux_amd64.zip
+unzip terraform-provider-local_2.5.2_linux_amd64.zip -d ~/.terraform.d/plugins/registry.opentofu.org/hashicorp/local/2.5.2/linux_amd64
+```
+
+- Предварительно должна быть создана директория в домашнем каталоге `~/.terraform.d/plugins`
+- Предварительно должен быть создан одноименный файл в домашнем каталоге `touch ~/.terraformrc`
 
 #### 7. В файл `.terraformrc` вписываем следующий конфиг (рекомендуемый способ, таким образом Terraform будет смотреть в провайдеры локально):
-        
-    ```hcl
-    provider_installation {
-      filesystem_mirror {
-        path = "~/.terraform.d/plugins"
-      }
-    }
-    ```
+
+```hcl
+provider_installation {
+filesystem_mirror {
+path = "~/.terraform.d/plugins"
+}
+}
+```
 
 #### 8. Способ с альтернативными зеркалами. В файл `.terraformrc` вписываем следующий конфиг (для загрузки провайдеров с вашего зеркала - способ плохо работает на территории РФ):
 
-    ```hcl
-    provider_installation {
-      network_mirror = "https://terraform-registry-mirror.ru/"  # Пример рабочего зеркала
-      direct {
-        exclude = ["registry.opentofu.org/*/*"]
-      }
-    }
-    ```
+```hcl
+provider_installation {
+network_mirror = "https://terraform-registry-mirror.ru/"  # Пример рабочего зеркала
+direct {
+exclude = ["registry.opentofu.org/*/*"]
+}
+}
+```
 
 ### **Теперь Terraform установлен и готов к работе!**
 
