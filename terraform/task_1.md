@@ -23,7 +23,7 @@ _От меня сразу рекомендация использовать то
 - Готово, пробуем `tofu ver...` + `tab`
 
 #### 4. Ручная загрузка провайдеров (так как скорее всего зеркала будут недоступны)
-- Найдите нужный провайдер (например, hashicorp/local) на сайте [GitHub Releases](https://github.com/opentofu/terraform-provider-local/releases).
+- Найдите нужный провайдер (например, hashicorp/local) на сайте [GitHub Releases](https://github.com/opentofu/terraform-provider-local/releases)
 - Скачайте и распакуйте в папку плагинов:
 
 ```bash
@@ -59,7 +59,7 @@ provider_installation {
 
 **Первые шаги:**
 
-Чтобы начать, создайте новую папку для своего проекта, например `terraform-hello`. Внутри создайте файл с именем `main.tf` (или любым другим именем с расширением `.tf`).
+Чтобы начать, создайте новую папку для своего проекта, например `terraform-project`. Внутри создайте файл с именем `main.tf` (или любым другим именем с расширением `.tf`).
 
 1. **Пример простого `main.tf`:**
 _Terraform смотрит в директорию `plugins` локальных провайдеров - способ рекомендуется!_
@@ -85,7 +85,7 @@ resource "local_file" "example" {
 1.  Перейдите в папку `terraform-hello` в терминале.
 2.  Выполните `tofu init --ignore-remote-version`. Terraform запустит провайдер `local`. Флаг `--ignore-remote-version` пропускает проверку версий провайдеров.
 3.  Выполните `tofu plan`. Вы увидите, что Terraform планирует создать один ресурс (`local_file.hello`).
-4.  Выполните `tofu apply`. Подтвердите действие, введя `yes`. Terraform создаст файл `hello.txt` в текущей папке (filename = "${path.module}/hello.txt") с указанным содержимым. Вы также увидите вывод `file_path`.
+4.  Выполните `tofu apply`. Подтвердите действие, введя `yes`. Terraform создаст файл `hello.txt` в текущей папке с указанным содержимым. Вы также увидите вывод `file_path`.
 5.  Чтобы удалить созданный файл, выполните `tofu destroy`. Подтвердите действие.
 
 ---
