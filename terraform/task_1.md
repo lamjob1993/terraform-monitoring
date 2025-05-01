@@ -39,12 +39,23 @@ _От меня сразу рекомендация использовать то
     - Предварительно должна быть создана директория в домашнем каталоге `~/.terraform.d/plugins`
     - Предварительно должен быть создан одноименный файл в домашнем каталоге `touch ~/.terraformrc`
 
-7. В файл `.terraformrc` вписываем следующий конфиг:
+7. В файл `.terraformrc` вписываем следующий конфиг (рекомендуемый способ, таким образом Terraform будет смотреть в провайдеры локально):
         
     ```hcl
     provider_installation {
       filesystem_mirror {
         path = "~/.terraform.d/plugins"
+      }
+    }
+    ```
+
+8. Способ с альтернативными зеркалами. В файл `.terraformrc` вписываем следующий конфиг (для загрузки провайдеров с вашего зеркала - способ плохо работает на территории РФ):
+
+    ```hcl
+    provider_installation {
+      network_mirror = "https://terraform-registry-mirror.ru/"  # Пример рабочего зеркала
+      direct {
+        exclude = ["registry.opentofu.org/*/*"]
       }
     }
     ```
@@ -55,66 +66,29 @@ _От меня сразу рекомендация использовать то
 
 Чтобы начать, создайте новую папку для своего проекта, например `terraform-hello`. Внутри создайте файл с именем `main.tf` (или любым другим именем с расширением `.tf`).
 
-1. **Пример простого `main.tf` (terraform сам скачивает провайдер по этому конфигу - способ не рекомендуется):**
+1. **Пример простого `main.tf`:**
+_Terraform смотрит в директорию `plugins` локальных провайдеров - способ рекомендуется!_
 
 ```hcl
-# Указываем, что будем использовать провайдер "local"
-# для работы с локальными файлами.
 terraform {
   required_providers {
     local = {
       source = "hashicorp/local"
-      version = "2.5.2" # Укажите актуальную версию провайдера, если нужно
+      version = "2.5.2"
     }
   }
 }
 
-# Описываем ресурс: локальный файл
-resource "local_file" "hello" {
-  # Имя файла, который будет создан
-  filename = "${path.module}/hello.txt" # Эта строка говорит Terraform: "Создай файл с именем hello.txt в том же каталоге"
-  # Содержимое файла
-  content  = "Привет от Terraform!"
-}
-
-# Опционально: выводим путь к созданному файлу после применения
-output "file_path" {
-  value = local_file.hello.filename
+resource "local_file" "example" {
+  filename = "hello.txt"
+  content  = "Hello, OpenTofu!"
 }
 ```
 
-2. **Пример простого `main.tf` (terraform смотрит в директорию `plugins` локальных провайдеров - способ рекомендуется):**
-
-```hcl
-# Указываем, что будем использовать провайдер "local"
-# для работы с локальными файлами.
-terraform {
-  required_providers {
-    local = {
-      source = "hashicorp/local"
-      version = "2.5.2" # Укажите актуальную версию провайдера, если нужно
-    }
-  }
-}
-
-# Описываем ресурс: локальный файл
-resource "local_file" "hello" {
-  # Имя файла, который будет создан
-  filename = "${path.module}/hello.txt" # Эта строка говорит Terraform: "Создай файл с именем hello.txt в том же каталоге"
-  # Содержимое файла
-  content  = "Привет от Terraform!"
-}
-
-# Опционально: выводим путь к созданному файлу после применения
-output "file_path" {
-  value = local_file.hello.filename
-}
-```
-
-3. **Как запустить этот пример:**
+2. **Как запустить этот пример:**
 
 1.  Перейдите в папку `terraform-hello` в терминале.
-2.  Выполните `tofu init`. Terraform скачает провайдер `local`.
+2.  Выполните `tofu init --ignore-remote-version`. Terraform запустит провайдер `local`. Флаг `--ignore-remote-version` пропускает проверку версий провайдеров.
 3.  Выполните `tofu plan`. Вы увидите, что Terraform планирует создать один ресурс (`local_file.hello`).
 4.  Выполните `tofu apply`. Подтвердите действие, введя `yes`. Terraform создаст файл `hello.txt` в текущей папке (filename = "${path.module}/hello.txt") с указанным содержимым. Вы также увидите вывод `file_path`.
 5.  Чтобы удалить созданный файл, выполните `tofu destroy`. Подтвердите действие.
