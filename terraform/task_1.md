@@ -26,6 +26,15 @@ _От меня сразу рекомендация использовать то
 5. Включаем обязательно автодополнение в консоли `tofu -install-autocomplete`
     - Применяем изменения `source ~/.bashrc`
     - Готово, пробуем `tofu ver...` + `tab`
+6. Ручная загрузка провайдеров (так как скорее всего зеркала будут недоступны)
+    - Найдите нужный провайдер (например, hashicorp/local) на [GitHub Releases](https://github.com/opentofu/terraform-provider-local/releases) или через VPN.
+    - Скачайте и распакуйте в папку плагинов:
+    ```bash
+    mkdir -p ~/.terraform.d/plugins/registry.opentofu.org/hashicorp/local/2.5.2/linux_amd64
+    wget https://releases.hashicorp.com/terraform-provider-local/2.5.2/terraform-provider-local_2.5.2_linux_amd64.zip
+    unzip terraform-provider-local_2.5.2_linux_amd64.zip -d ~/.terraform.d/plugins/registry.opentofu.org/hashicorp/local/2.5.2/linux_amd64
+    ```
+
 
 **Теперь Terraform установлен и готов к работе!**
 
