@@ -38,8 +38,8 @@ unzip terraform-provider-local_2.5.2_linux_amd64.zip -d ~/.terraform.d/plugins/r
 
 ```hcl
 provider_installation {
-  filesystem_mirror {
-    path = "~/.terraform.d/plugins"
+    filesystem_mirror {
+        path = "~/.terraform.d/plugins"
     }
 }
 ```
@@ -48,10 +48,9 @@ provider_installation {
 
 ```hcl
 provider_installation {
-  network_mirror = "https://terraform-registry-mirror.ru/"  # Пример рабочего зеркала
-    direct {
-      exclude = ["registry.opentofu.org/*/*"]
-  }
+    network_mirror {
+        url = "https://terraform-registry-mirror.ru/"
+    }
 }
 ```
 
