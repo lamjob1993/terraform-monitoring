@@ -57,8 +57,8 @@ provider_installation {
   }
 }
 ```
-- А также для этого способа необходимо поднять docker + docker compose по ссылке:
-  - Docker Compose
+- А также для этого способа необходимо поднять [docker + docker compose по ссылке](https://terraform-registry-mirror.ru/):
+  - Это неофициальное, но рабочее зеркало на территории РФ, которое завязано на контейнер
 ```yaml
 services:
   terraform-registry-mirror:
