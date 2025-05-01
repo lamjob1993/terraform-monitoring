@@ -10,7 +10,7 @@
   - Образы и ПО:
     - [Зеркало Yandex.Cloud с софтом для инфры (инфраструктуры)](https://mirror.yandex.ru/)
       - Различные версии ОС: CentOS, Debian, Ubuntu, как старые версии, так и новые + обширный список пакетов
-      - Легковесный: [Ubuntu 20.04.6](https://mirror.yandex.ru/ubuntu-releases/20.04.6/)
+      - Легковесный: [Ubuntu 20.04.6](https://mirror.yandex.ru/ubuntu-releases/20.04.6/) - ubuntu-20.04.6-live-server-amd64.iso 
       - Легковесный: 
 
   
