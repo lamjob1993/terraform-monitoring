@@ -29,12 +29,17 @@ _От меня сразу рекомендация использовать то
 6. Ручная загрузка провайдеров (так как скорее всего зеркала будут недоступны)
     - Найдите нужный провайдер (например, hashicorp/local) на [GitHub Releases](https://github.com/opentofu/terraform-provider-local/releases) или через VPN.
     - Скачайте и распакуйте в папку плагинов:
+    
     ```bash
     mkdir -p ~/.terraform.d/plugins/registry.opentofu.org/hashicorp/local/2.5.2/linux_amd64
     wget https://releases.hashicorp.com/terraform-provider-local/2.5.2/terraform-provider-local_2.5.2_linux_amd64.zip
     unzip terraform-provider-local_2.5.2_linux_amd64.zip -d ~/.terraform.d/plugins/registry.opentofu.org/hashicorp/local/2.5.2/linux_amd64
     ```
-7. Настройте .terraformrc:
+    
+    - Предварительно должна быть создана директория в домашнем каталоге: `~/.terraform.d/plugins`
+    - Предварительно должен быть создан одноименный файл в домашнем каталоге `touch ~/.terraformrc`
+
+7. В файл `.terraformrc` вписываем следующий конфиг:
         
     ```hcl
     provider_installation {
