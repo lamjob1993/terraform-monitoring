@@ -59,7 +59,7 @@ provider_installation {
 ```
 - А также для этого способа необходимо поднять docker + docker compose по ссылке:
   - Docker Compose
-```dockerfile
+```yaml
 services:
   terraform-registry-mirror:
     image: ghcr.io/jonasasx/terraform-registry-mirror:0.0.9
