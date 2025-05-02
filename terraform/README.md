@@ -4,7 +4,7 @@
   - Cделать интеграцию с LXC/LXD или с Docker
   - Сделать Nexus в качестве репозитория провайдеров
   - Ввести практику VS Code + Copilot или DeepSeek
-- [Практика](https://github.com/lamjob1993/terraform-monitoring/tree/main/terraform)
+- [Практика](https://github.com/lamjob1993/terraform-monitoring/tree/main/terraform/tasks)
 - Дополнительные ссылки для изучения:
   - Terraform:
     - [Официальный сайт Terraform Download](https://developer.hashicorp.com/terraform/install#linux)
