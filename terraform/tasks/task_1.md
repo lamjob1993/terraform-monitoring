@@ -46,6 +46,7 @@ services:
 ```
 
 - [И переходим ниже к практике](https://github.com/lamjob1993/terraform-monitoring/blob/main/terraform/tasks/task_1.md#%D1%82%D0%B5%D0%BF%D0%B5%D1%80%D1%8C-terraform-%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD-%D0%B8-%D0%B3%D0%BE%D1%82%D0%BE%D0%B2-%D0%BA-%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B5)
+- Если способ с зеркалом не работает, то продолжаем следующие пункты
 
 #### 5. Ручная загрузка провайдеров (выполняем только если зеркало не доступно)
 - Найдите нужный провайдер (например, hashicorp/local для нашего примера) на сайте [GitHub Releases](https://github.com/orgs/opentofu/repositories?type=all)
