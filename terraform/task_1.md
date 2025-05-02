@@ -31,9 +31,6 @@ provider_installation {
   network_mirror {
     url = "https://terraform-registry-mirror.ru/"
   }
-  direct {
-    exclude = ["registry.terraform.io/*/*", "releases.hashicorp.com/*/*"]
-  }
 }
 ```
 
