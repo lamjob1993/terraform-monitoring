@@ -45,9 +45,9 @@ services:
       - "8080:8080"
 ```
 
-#### 5. Ручная загрузка провайдеров (если зеркала будут недоступны)
+#### 5. Ручная загрузка провайдеров (выполняем только если зеркало не доступно)
 - Найдите нужный провайдер (например, hashicorp/local для нашего примера) на сайте [GitHub Releases](https://github.com/orgs/opentofu/repositories?type=all)
-- Скачайте и распакуйте в папку плагинов:
+- Скачайте и распакуйте в директорию плагинов:
 
 ```bash
 mkdir -p ~/.terraform.d/plugins/registry.opentofu.org/hashicorp/local/2.5.2/linux_amd64
@@ -55,10 +55,11 @@ wget https://releases.hashicorp.com/terraform-provider-local/2.5.2/terraform-pro
 unzip terraform-provider-local_2.5.2_linux_amd64.zip -d ~/.terraform.d/plugins/registry.opentofu.org/hashicorp/local/2.5.2/linux_amd64
 ```
 
-- Предварительно должна быть создана директория `.terraform.d` в домашнем каталоге `-p ~/.terraform.d/plugins/registry.opentofu.org/hashicorp/local/2.5.2/linux_amd64`
-- Предварительно рядом должен быть создан файл `.tofurc` в домашнем каталоге `touch ~/.tofurc`
+- Предварительно должна быть создана директория `mkdir -p ~/.terraform.d/plugins/registry.opentofu.org/hashicorp/local/2.5.2/linux_amd64` в домашнем каталоге
 
-#### 6. В файл `~/.tofurc` вписываем следующий конфиг (долгий способ, но работает точно, таким образом OpenTofu будет смотреть в скачанные вами провайдеры локально):
+- Предварительно рядом должен быть создан файл `touch ~/.tofurc` в домашнем каталоге
+
+#### 6. В файл `nano ~/.tofurc` вписываем следующий конфиг (долгий способ, но работает точно, таким образом OpenTofu будет смотреть в скачанные вами провайдеры локально):
 
 ```hcl
 provider_installation {
