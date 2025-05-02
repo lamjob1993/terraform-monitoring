@@ -46,7 +46,7 @@ services:
 ```
 
 #### 5. Ручная загрузка провайдеров (если зеркала будут недоступны)
-- Найдите нужный провайдер (например, hashicorp/local) на сайте [GitHub Releases](https://github.com/opentofu/terraform-provider-local/releases)
+- Найдите нужный провайдер (например, hashicorp/local для нашего примера) на сайте [GitHub Releases](https://github.com/orgs/opentofu/repositories?type=all)
 - Скачайте и распакуйте в папку плагинов:
 
 ```bash
@@ -55,10 +55,10 @@ wget https://releases.hashicorp.com/terraform-provider-local/2.5.2/terraform-pro
 unzip terraform-provider-local_2.5.2_linux_amd64.zip -d ~/.terraform.d/plugins/registry.opentofu.org/hashicorp/local/2.5.2/linux_amd64
 ```
 
-- Предварительно должна быть создана директория в домашнем каталоге `~/.terraform.d/plugins`
-- Предварительно рядом должен быть создан одноименный файл в домашнем каталоге `touch ~/.terraformrc`
+- Предварительно должна быть создана директория `.terraform.d` в домашнем каталоге `-p ~/.terraform.d/plugins/registry.opentofu.org/hashicorp/local/2.5.2/linux_amd64`
+- Предварительно рядом должен быть создан файл `.tofurc` в домашнем каталоге `touch ~/.tofurc`
 
-#### 6. В файл `~/.tofurc` вписываем следующий конфиг (долгий способ, но работает железобетонно, таким образом OpenTofu будет смотреть в скачанные вами провайдеры локально):
+#### 6. В файл `~/.tofurc` вписываем следующий конфиг (долгий способ, но работает точно, таким образом OpenTofu будет смотреть в скачанные вами провайдеры локально):
 
 ```hcl
 provider_installation {
@@ -72,24 +72,23 @@ provider_installation {
 
 **Первые шаги:**
 
-Чтобы начать, создайте новую папку для своего проекта, например `terraform-project`. Внутри создайте файл с именем `main.tf` (или любым другим именем с расширением `.tf`).
+Чтобы начать, создайте новый каталог для своего проекта, например `terraform-project`. Внутри создайте файл с именем `main.tf`.
 
 1. **Пример простого `main.tf`:**
-_Terraform смотрит в директорию `plugins` локальных провайдеров - способ рекомендуется!_
 
 ```hcl
 terraform {
   required_providers {
     local = {
-      source = "hashicorp/local"
+      source = "hashicorp/local"  # Terraform выбирает нужный провайдер для работы
       version = "2.5.2"
     }
   }
 }
 
 resource "local_file" "example" {
-  filename = "hello.txt"
-  content  = "Hello, Terraform-OpenTofu!"
+  filename = "hello.txt"  # Terraform создает файл hello.txt
+  content  = "Hello, Terraform-OpenTofu!"  # Terraform наполняет файл hello.txt содержимым
 }
 ```
 
