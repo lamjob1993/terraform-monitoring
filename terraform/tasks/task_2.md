@@ -1,15 +1,6 @@
 
 ### Практика
 
-#### Установка Terraform
-
-1. Скачайте и установите Terraform с официального сайта: [https://www.terraform.io/downloads](https://www.terraform.io/downloads).
-2. Убедитесь, что Terraform работает, выполнив команду:
-
-   ```bash
-   terraform --version
-   ```
-
 #### Создание конфигурации
 
 Создайте файл `main.tf` со следующим содержимым:
