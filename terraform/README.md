@@ -4,6 +4,7 @@
   - Cделать интеграцию с LXC/LXD или с Docker
   - Сделать Nexus в качестве репозитория провайдеров
   - Ввести практику VS Code + Copilot или DeepSeek
+  - Поднять инфру Терраформом и заполнить конфигами эту инфру через Ansible
 - [Практика](https://github.com/lamjob1993/terraform-monitoring/tree/main/terraform/tasks)
 - Дополнительные ссылки для изучения:
   - Terraform:
