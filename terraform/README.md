@@ -8,7 +8,7 @@
   - Ввести практику VS Code + Copilot или DeepSeek
   - Поднять инфру Терраформом и заполнить конфигами эту инфру через Ansible
 - [Практика](https://github.com/lamjob1993/terraform-monitoring/tree/main/terraform/tasks)
-- Дополнительные ссылки для изучения:
+- **Дополнительные ссылки для изучения**:
   - Terraform:
     - [Официальный сайт Terraform Download](https://developer.hashicorp.com/terraform/install#linux)
       - [Официальный сайт для автоматической загрузки провайдеров самим Терраформом](https://registry.terraform.io/browse/providers)
