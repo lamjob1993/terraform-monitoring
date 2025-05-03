@@ -3,10 +3,6 @@
 - **Предисловие**
   - Перед выполнением заданий по репозиторию нужно пройти [хендук по Python от Яндекс](https://education.yandex.ru/handbook/python) и только первые две главы. Если есть время и желание, то можно в фоне проходить и дальше, совмещая с прохождением курса.
 - [Введение](https://github.com/lamjob1993/terraform-monitoring/tree/main/terraform/beggining)
-  - Cделать интеграцию с LXC/LXD или с Docker
-  - Сделать Nexus в качестве репозитория провайдеров
-  - Ввести практику VS Code + Copilot или DeepSeek
-  - Поднять инфру Терраформом и заполнить конфигами эту инфру через Ansible
 - [Практика](https://github.com/lamjob1993/terraform-monitoring/tree/main/terraform/tasks)
 - **Дополнительные ссылки для изучения**:
   - Terraform:
@@ -21,5 +17,8 @@
       - Различные версии ОС: CentOS, Debian, Ubuntu, как старые версии, так и новые + обширный список пакетов для них
         - Легковесный: [Debian-12.10.0-amd64-netinst.iso](https://mirror.yandex.ru/debian-cd/current/amd64/iso-cd/) / 633Мб
         - Легковесный: [CentOS-Stream-10-latest-x86_64-boot.iso](https://mirror.yandex.ru/centos-stream/10-stream/BaseOS/x86_64/iso/) / 819 Мб
-
-  
+- Мой черновик (в работе):
+  - Cделать интеграцию с LXC/LXD или с Docker
+  - Сделать Nexus в качестве репозитория провайдеров
+  - Ввести практику VS Code + Copilot или DeepSeek
+  - Поднять инфру Терраформом и заполнить конфигами эту инфру через Ansible
