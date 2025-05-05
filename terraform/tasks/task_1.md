@@ -9,6 +9,10 @@
 
 - Переходим на [официальную страницу для загрузки](https://developer.hashicorp.com/terraform/install#linux) бинаря AMD64.
 - Переходим в [официальный гайд по установке](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli) и запуску первого провайдера.
+  - После распаковки нужно переместить terraform в директорию bin:
+    - `sudo mv terraform /usr/local/bin`
+    - Выйдите из директории, если копировали файл
+    - Введите `terraform version` для проверки 
 - Ставим обязательно автодополнение по `tab`:
   - `terraform -install-autocomplete`
   - `touch ~/.bashrc`
