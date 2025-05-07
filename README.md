@@ -1,4 +1,4 @@
-# Terraform / В разработке / Не выполняем
+# Terraform Monitoring
 
 ## [Содержание](https://github.com/lamjob1993/terraform-monitoring/blob/main/terraform/README.md)
 
