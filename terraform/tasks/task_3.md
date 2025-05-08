@@ -98,7 +98,7 @@ resource "docker_network" "dev_network" {
    - Ключевое слово Terraform, указывающее, что мы определяем ресурс — объект инфраструктуры, которым будет управлять Terraform.
 
 2. **`"docker_network"`**:
-   - Тип ресурса, предоставляемый провайдером Docker. Указывает, что мы создаём сеть в Docker, которая изолирует контейнеры (аналог VPC в облаке).
+   - Тип ресурса, [предоставляемый провайдером Docker](https://registry.terraform.io/providers/kreuzwerker/docker/latest/docs/resources/network). Указывает, что мы создаём сеть в Docker, которая изолирует контейнеры (аналог VPC в облаке).
 
 3. **`"dev_network"`**:
    - Логическое имя ресурса в Terraform. Это внутреннее имя, используемое в коде Terraform для ссылки на этот ресурс (например, `docker_network.dev_network.name`). Оно не влияет на имя сети в Docker.
