@@ -140,12 +140,8 @@ db_password = "dev_password"
    terraform destroy
    ```
 
-#### Задания для студентов
+#### Дополнительное задание
 - Измените `web_port` на 8090 в `terraform.tfvars` и проверьте `http://localhost:8090`.
-- Добавьте `curl` в контейнер `dev-web`, изменив `command`:
-  ```hcl
-  command = ["/bin/bash", "-c", "apt-get update && apt-get install -y nginx curl && nginx -g 'daemon off;'"]
-  ```
 
 ---
 
