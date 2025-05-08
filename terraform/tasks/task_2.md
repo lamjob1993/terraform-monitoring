@@ -16,6 +16,8 @@ _Для подобного рода задач заводится таска в 
 
 ### Успешное выполнение задачи:
 
+- В данной задаче активно используется [аргумент count](https://developer.hashicorp.com/terraform/language/meta-arguments/count).
+
 ```bash
 Do you want to perform these actions?
   Terraform will perform the actions described above.
