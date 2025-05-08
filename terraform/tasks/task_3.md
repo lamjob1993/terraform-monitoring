@@ -88,7 +88,7 @@ resource "docker_container" "dev_db" {
 }
 ```
 
-**Пояснения:**
+#### **Пояснения:**
 
 ```hcl
 resource "docker_network" "dev_network" {
