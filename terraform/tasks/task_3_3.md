@@ -16,7 +16,7 @@
 
 #### Структура проекта
 ```
-terraform-docker-course/
+terraform_project/
 ├── main.tf
 ├── variables.tf
 ├── terraform.tfvars
