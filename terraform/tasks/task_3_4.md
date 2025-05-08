@@ -7,8 +7,8 @@
   - Создаётся в папке `modules/environment/` с файлами `main.tf` и `variables.tf`.
   - Описывает сеть (`{env_name}-network`), веб-сервер (`{env_name}-web`) и базу данных (`{env_name}-db`) для одной среды.
   - Принимает параметры: `env_name`, `web_port`, `db_user`, `db_password`, `db_name`.
-- **Цикл `for_each`**:
-  - В главном `main.tf` используется `[for_each](https://developer.hashicorp.com/terraform/language/meta-arguments/for_each)` для вызова модуля `environment` для каждой среды из `var.environments`.
+- **Цикл [for_each](https://developer.hashicorp.com/terraform/language/meta-arguments/for_each)**:
+  - В главном `main.tf` используется `for_each` для вызова модуля `environment` для каждой среды из `var.environments`.
   - Например, для `dev` передаётся `env_name = "dev"`, `web_port = 8080` и т.д.
 - **Результат**:
   - Код в `main.tf` сокращается до нескольких строк.
