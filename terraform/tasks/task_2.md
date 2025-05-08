@@ -15,7 +15,7 @@ _Для подобного рода задач заводится таска в 
   - Для того чтобы поддерживать работу контейнера в фоне пробрасываем в аргумент `CMD` каждого контейнера `tail -f /dev/null`.
 - Для выполнения задачи используется [аргумент count](https://developer.hashicorp.com/terraform/language/meta-arguments/count).
 
-### Успешное выполнение задачи:
+### Успешное выполнение задачи (не забываем добавить CentOS):
 
 ```bash
 Do you want to perform these actions?
