@@ -6,20 +6,20 @@ _Для подобного рода задач заводится таска в 
 
 ### Подготовка к плавному переходу в репозиторий Ansible. Разворачивание инфраструктуры мониторинга на три контура: DEV, STAGING и PROD
 
-1. Нужно подготовить каждый контур [для деплоя мониторинга](https://github.com/lamjob1993/ansible-monitoring/blob/main/ansible/tasks/monitoring_project/playbook.yml):
-  - Это **Ansible** плейбук с нужными ролями.
-  - Представлен, как будущий проект, где нужно развернуть по 8 контейнеров на каждом контуре [Ansible: Task_3](https://github.com/lamjob1993/ansible-monitoring/blob/main/ansible/tasks/task_3.md)).
-2. Далее нужно самостоятельно написать структуру проекта (хотя по сути ничего сложного, тоже самое, что и в проекте по заданию 3).
+1. Нужно подготовить каждый контур для деплоя мониторинга:
+  - Это **Ansible** плейбук с [нужными ролями](https://github.com/lamjob1993/ansible-monitoring/blob/main/ansible/tasks/monitoring_project/playbook.yml).
+  - Плейбук представлен, как будущий проект, где нужно развернуть по 8 контейнеров на каждом контуре [Ansible: Task_3](https://github.com/lamjob1993/ansible-monitoring/blob/main/ansible/tasks/task_3.md)).
+2. Далее нужно самостоятельно написать структуру **Terraform** проекта (почти тоже самое, что и в проекте по заданию 3).
 3. В данном проекте на каждом контуре должно быть по 8 пустых контейнеров **Debian**, в которые может ходить Ansible:
   - Нужно жестко прописать на каждый контейнер: `openssh` + `systemd`.
   - Завязать на каждый контейнер уникальный IP.
   - Каждый контур должен быть в своей сети Docker.
 4. Инфраструктура подготовлена:
-  - Не забываем, что на работе мы работаем с облаком на базе OpenStack (SberInfra, Альфа Cloud, ВТБ Cloud и т.д) через провайдер [Terraform OpenStack](https://registry.terraform.io/providers/terraform-provider-openstack/openstack/latest) и что для нас контейнеры - это VM-ки либо в облачной терминологии - инстансы).
+  - Не забываем, что на работе мы используем облако на базе OpenStack (SberInfra, Альфа Cloud, ВТБ Cloud и т.д) через провайдер [Terraform OpenStack](https://registry.terraform.io/providers/terraform-provider-openstack/openstack/latest) и что для нас контейнеры - это VM-ки либо в облачной терминологии - инстансы).
 5. Тем самым **Terraform** раскрывается, как IaC по прямому назначению, то есть разворачивает только инфраструктуру (на 3 контура разработки по 8 подготовленных инстансов) описанную кодом (декларативно).
   - К дальнейшей автоматизации развернутой инфры подключается **Ansible**, как IaC по прямому назначению для работы с конфигурациями (императивно-декларативно). 
 5. Сохраняем эту Ubuntu VM-ку и не трогаем.
-6. Переходим в репозиторий Ansible (это задание, как подготовка к [Ansible: Task_3](https://github.com/lamjob1993/ansible-monitoring/blob/main/ansible/tasks/task_3.md)).
+6. Переходим в репозиторий Ansible (текущее задание, как подготовка к [Ansible: Task_3](https://github.com/lamjob1993/ansible-monitoring/blob/main/ansible/tasks/task_3.md)).
 
 ---
 
