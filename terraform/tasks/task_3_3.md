@@ -3,7 +3,7 @@
 На этом уровне мы устраняем дублирование кода, внедряя **модули** и **циклы** (`for_each`). Модуль `environment` будет описывать сеть и контейнеры для одной среды, а цикл `for_each` автоматически создаст ресурсы для всех сред, используя переменную `environments`. Это сделает проект компактным, гибким и готовым к масштабированию (например, добавление новой среды `test` потребует только изменения `terraform.tfvars`).
 
 #### Что происходит
-- **Модуль [environment](https://developer.hashicorp.com/terraform/language/modules/syntax):
+- **Модуль **[environment](https://developer.hashicorp.com/terraform/language/modules/syntax)**:
   - Создаётся в папке `modules/environment/` с файлами `main.tf` и `variables.tf`.
   - Описывает сеть (`{env_name}-network`), веб-сервер (`{env_name}-web`) и базу данных (`{env_name}-db`) для одной среды.
   - Принимает параметры: `env_name`, `web_port`, `db_user`, `db_password`, `db_name`.
