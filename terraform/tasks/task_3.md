@@ -42,9 +42,6 @@ terraform-docker-course/
 │       ├── main.tf
 │       ├── variables.tf
 │       └── outputs.tf
-├── dev.tf
-├── staging.tf
-├── prod.tf
 ├── variables.tf
 └── terraform.tfvars
 ```
