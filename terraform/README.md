@@ -15,8 +15,3 @@
       - Различные версии ОС: CentOS, Debian, Ubuntu, как старые версии, так и новые + обширный список пакетов для них
         - Легковесный: [Debian-12.10.0-amd64-netinst.iso](https://mirror.yandex.ru/debian-cd/current/amd64/iso-cd/) / 633Мб
         - Легковесный: [CentOS-Stream-10-latest-x86_64-boot.iso](https://mirror.yandex.ru/centos-stream/10-stream/BaseOS/x86_64/iso/) / 819 Мб
-- **Мой черновик (в работе)**
-  - Cделать интеграцию с LXC/LXD или с Podman
-  - Сделать Nexus в качестве репозитория провайдеров
-  - Ввести практику VS Code + DeepSeek
-  - Поднять инфру Терраформом и заполнить конфигами через Ansible (это точно переедет в репу Ansible)
