@@ -199,4 +199,7 @@ prod_db_password = "prod_password"
   - `http://localhost:8080` (dev), `8081` (staging), `8082` (prod).
   - База: `docker exec -it prod-db psql -U prod_user -d prod_db`.
 
+#### Удаление проекта
+- `terraform destroy`
+
 ---
