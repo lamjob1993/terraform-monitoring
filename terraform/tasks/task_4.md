@@ -22,7 +22,7 @@ _Для подобного рода задач заводится таска в 
     - К дальнейшей автоматизации развернутой инфры подключается **Ansible**, как IaC по прямому назначению для работы с конфигурациями (императивно-декларативно). 
 5. Сохраняем эту Ubuntu VM-ку и не трогаем.
 6. Внимательно читаем раздел: [Модуль 7: Декларативный и императивный стили](https://github.com/lamjob1993/terraform-monitoring/blob/main/terraform/beggining/%D0%9C%D0%BE%D0%B4%D1%83%D0%BB%D1%8C%207%3A%20%D0%94%D0%B5%D0%BA%D0%BB%D0%B0%D1%80%D0%B0%D1%82%D0%B8%D0%B2%D0%BD%D1%8B%D0%B9%20%D0%B8%20%D0%B8%D0%BC%D0%BF%D0%B5%D1%80%D0%B0%D1%82%D0%B8%D0%B2%D0%BD%D1%8B%D0%B9%20%D1%81%D1%82%D0%B8%D0%BB%D0%B8.md).
-7. Обращаем пристальное внимание на раздел: [Модуль 8: Пример простого пайплайна.md](https://github.com/lamjob1993/terraform-monitoring/blob/main/terraform/beggining/%D0%9C%D0%BE%D0%B4%D1%83%D0%BB%D1%8C%208%3A%20%D0%9F%D1%80%D0%B8%D0%BC%D0%B5%D1%80%20%D0%BF%D0%B0%D0%B9%D0%BF%D0%BB%D0%B0%D0%B9%D0%BD%D0%B0.md).
+7. Обращаем пристальное внимание на раздел: [Модуль 8: Пример простого пайплайна](https://github.com/lamjob1993/terraform-monitoring/blob/main/terraform/beggining/%D0%9C%D0%BE%D0%B4%D1%83%D0%BB%D1%8C%208%3A%20%D0%9F%D1%80%D0%B8%D0%BC%D0%B5%D1%80%20%D0%BF%D0%B0%D0%B9%D0%BF%D0%BB%D0%B0%D0%B9%D0%BD%D0%B0.md).
 6. Переходим в начало репозитория Ansible и приступаем к выполнению с самого начала (текущее задание было, как подготовка к [Ansible: Task_4](https://github.com/lamjob1993/ansible-monitoring/blob/main/ansible/tasks/task_4.md)).
 
 ---
