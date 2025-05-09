@@ -10,7 +10,7 @@ _Для подобного рода задач заводится таска в 
 
 1. Нужно подготовить каждый контур для деплоя мониторинга:
     - Это **Ansible** плейбук с [нужными ролями](https://github.com/lamjob1993/ansible-monitoring/blob/main/ansible/tasks/monitoring_project/playbook.yml).
-    - Плейбук представлен, как будущий проект, где нужно развернуть по 8 контейнеров на каждом контуре [Ansible: Task_3](https://github.com/lamjob1993/ansible-monitoring/blob/main/ansible/tasks/task_3.md)).
+    - Плейбук представлен, как будущий проект, где нужно развернуть по 8 контейнеров на каждом контуре [Ansible: Task_4](https://github.com/lamjob1993/ansible-monitoring/blob/main/ansible/tasks/task_4.md)).
 2. Далее нужно самостоятельно написать структуру **Terraform** проекта (почти тоже самое, что и в проекте по заданию 3).
 3. В данном проекте на каждом контуре должно быть по 8 пустых контейнеров **Debian**, в которые может ходить Ansible:
     - Нужно жестко прописать на каждый контейнер: `openssh` + `systemd`.
