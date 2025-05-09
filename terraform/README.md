@@ -1,6 +1,6 @@
 # Содержание
 
-<img src="https://github.com/lamjob1993/linux-monitoring/blob/main/.files/.bucket/terraform%2Bansible_scheme.png" alt="terraform + ansible" width="800">
+<img src="https://github.com/lamjob1993/linux-monitoring/blob/main/.files/.bucket/terraform%2Bansible_scheme.png" alt="terraform + ansible" width="1000">
 
 - **Предисловие**
   - Перед выполнением заданий по репозиторию нужно пройти [хендбук по Python от Яндекс](https://education.yandex.ru/handbook/python) и только первые две главы + задачи. Если есть время и желание, то можно в фоне проходить и дальше, совмещая с прохождением курса.
