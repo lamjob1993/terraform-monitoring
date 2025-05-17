@@ -2,7 +2,7 @@
 
 <img src="https://github.com/lamjob1993/linux-monitoring/blob/main/.files/.bucket/terraform%2Bansible_scheme.png" alt="terraform + ansible" width="1000">
 
-- **Предисловие**
+- [Предисловие](https://github.com/lamjob1993/terraform-monitoring/blob/main/terraform/%D0%9F%D1%80%D0%B5%D0%B4%D0%B8%D1%81%D0%BB%D0%BE%D0%B2%D0%B8%D0%B5.md)
 - [Введение](https://github.com/lamjob1993/terraform-monitoring/tree/main/terraform/beggining)
 - [Практика](https://github.com/lamjob1993/terraform-monitoring/tree/main/terraform/tasks)
 - **Дополнительные ссылки для изучения**
