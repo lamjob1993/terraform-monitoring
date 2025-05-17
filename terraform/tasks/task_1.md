@@ -1,5 +1,6 @@
 # Terraform
 
+- Перед выполнением заданий по репозиторию нужно пройти [хендбук по Python от Яндекс](https://education.yandex.ru/handbook/python) и только первые две главы + задачи. Если есть время и желание, то можно в фоне проходить и дальше, совмещая с прохождением курса.
 - Читаем правила [Пункт 2](https://github.com/lamjob1993/linux-monitoring/blob/main/navigation/others/%D0%9F%D1%80%D0%B5%D0%B4%D0%B8%D1%81%D0%BB%D0%BE%D0%B2%D0%B8%D0%B5%20%D0%BA%20%D0%BA%D1%83%D1%80%D1%81%D1%83.md).
 
 ---
