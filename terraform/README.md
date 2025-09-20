@@ -5,7 +5,7 @@
 - [Предисловие](https://github.com/lamjob1993/docker-monitoring/blob/main/docker/%D0%9F%D1%80%D0%B5%D0%B4%D0%B8%D1%81%D0%BB%D0%BE%D0%B2%D0%B8%D0%B5.md)
 - [Введение](https://github.com/lamjob1993/terraform-monitoring/tree/main/terraform/beggining)
 - [Практика](https://github.com/lamjob1993/terraform-monitoring/tree/main/terraform/tasks)
-- **Дополнительные ссылки для изучения**
+- **Дополнительные темы для изучения**
   - Terraform:
     - [Официальный сайт Terraform Download](https://developer.hashicorp.com/terraform/install#linux)
     - [Официальный сайт Terraform Registry](https://registry.terraform.io/browse/providers)
